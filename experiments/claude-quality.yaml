@@ -1,0 +1,37 @@
+# Purpose: speed and answer quality for Claude, in one session. The speed runs match
+# claude-baseline.yaml. Then each model answers the 24 tasks in evals/core.yaml three
+# times, and code grades every answer: no model grades another, or itself.
+#
+# Claude Code must be installed and signed in. Each request uses your plan's usage limits;
+# this file makes 18 speed requests and 216 short task requests.
+#
+# Run it:   uv run python -m llmlab run experiments/claude-quality.yaml
+# Check it: uv run python -m llmlab run experiments/claude-quality.yaml --dry-run
+
+name: claude-quality
+description: >-
+  Claude Haiku 5.5, Sonnet 5.5 and Opus 5.5 through Claude Code at low effort: the
+  baseline speed runs, then 24 graded tasks three times each.
+
+engine:
+  type: claude-code
+  effort: low      # the lowest level every model accepts
+  thinking: auto   # each model decides; the thinking tokens are recorded
+
+model:
+  name: claude-haiku-5-5
+
+workload:
+  prompt_file: ../prompts/field-notes.txt   # relative to this file
+
+run:
+  warmup: 1
+  repeats: 5
+  cooldown_s: 1.0   # a pause between requests
+
+quality:
+  suite: ../evals/core.yaml
+  repeats: 3
+
+sweep:
+  model.name: [claude-haiku-5-5, claude-sonnet-5-5, claude-opus-5-5]

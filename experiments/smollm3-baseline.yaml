@@ -1,0 +1,32 @@
+# Purpose: the reproducibility baseline. Run it twice and `compare` the sessions:
+# generation speed should agree within 5%. It measures SmolLM3 3B Q4_K_M with every
+# layer on the GPU (GPU-bound) and with 18 of 37 layers on the GPU (CPU-bound).
+#
+# Run it:   uv run python -m llmlab run experiments/smollm3-baseline.yaml
+# Check it: uv run python -m llmlab run experiments/smollm3-baseline.yaml --dry-run
+
+name: smollm3-baseline
+description: >-
+  SmolLM3 3B Q4_K_M, the 521-token field-notes prompt, 512 generated tokens.
+  All layers on the GPU, and 18 of 37 layers on the GPU.
+
+model:
+  path: ${LLMLAB_HOME}/models/SmolLM3-3B/SmolLM3-Q4_K_M.gguf
+
+server:
+  ctx: 4096
+  gpu_layers: all
+  flash_attn: "on"   # quoted: YAML reads a bare on as true (the harness accepts both)
+
+workload:
+  prompt_file: ../prompts/field-notes.txt   # relative to this file
+  n_predict: 512
+  seed: 42
+
+run:
+  warmup: 1
+  repeats: 5
+  cooldown_s: 0.1   # longer pauses let the GPU drop to a power-saving state between runs
+
+sweep:
+  server.gpu_layers: [all, 18]

@@ -1,0 +1,371 @@
+# Purpose: the fixed task set behind every quality score. Each answer is graded by code
+# against a known answer, so no model ever grades another (or itself).
+#
+# Every task carries a reference (a correct answer the grader must accept) and a wrong
+# answer (a plausible mistake it must reject); the tests and every run check both.
+# Changing anything here changes the suite's hash, and scores only compare within one hash.
+
+name: core
+version: 1
+description: >-
+  24 original tasks, six in each category, from easy to hard: exact match, JSON
+  generation, coding against hidden tests, and multi-step reasoning with a known answer.
+
+tasks:
+  # ------------------------------------------------------------ exact match
+  - id: extract-invoice
+    category: exact
+    prompt: |
+      Extract the invoice number from this email. Reply with only the invoice number.
+
+      Hi Dana, the payment for order 88213 is late. Invoice INV-2047-K was sent on 3 March, and the PO reference is PO-5521.
+    answers: ["INV-2047-K"]
+    reference: "INV-2047-K"
+    wrong: "PO-5521"
+
+  - id: classify-review
+    category: exact
+    prompt: |
+      Classify the sentiment of this review as exactly one word: positive, negative or mixed. Reply with only that word.
+
+      The battery lasts for days, but the screen cracked within a week and support never replied.
+    answers: ["mixed"]
+    reference: "Mixed"
+    wrong: "negative"
+
+  - id: count-even
+    category: exact
+    prompt: |
+      How many of these numbers are even and greater than 20? Reply with only the count.
+
+      14, 22, 31, 40, 7, 28, 19, 56, 20, 33, 64
+    answers: ["5"]
+    reference: "5"
+    wrong: "6"
+
+  - id: sort-words
+    category: exact
+    prompt: |
+      Sort these words alphabetically, ignoring case. Reply with only the sorted words, separated by commas.
+
+      maple, Birch, oak, Aspen, cedar, willow, Elm
+    answers: ["Aspen, Birch, cedar, Elm, maple, oak, willow"]
+    reference: "Aspen, Birch, cedar, Elm, maple, oak, willow"
+    wrong: "Aspen, Birch, Elm, cedar, maple, oak, willow"
+
+  - id: iso-dates
+    category: exact
+    prompt: |
+      Convert each date to the format YYYY-MM-DD. Reply with only the converted dates, separated by commas, in the same order.
+
+      4 July 2021, March 9 1999, 31/12/2015 (day/month/year)
+    answers: ["2021-07-04, 1999-03-09, 2015-12-31"]
+    reference: "2021-07-04, 1999-03-09, 2015-12-31"
+    wrong: "2021-04-07, 1999-03-09, 2015-12-31"
+
+  - id: reverse-word
+    category: exact
+    prompt: |
+      Write the letters of the word "benchmark" in reverse order, as one word. Reply with only that word.
+    answers: ["kramhcneb"]
+    reference: "kramhcneb"
+    wrong: "kramhcenb"
+
+  # ------------------------------------------------------------ JSON generation
+  - id: contact-card
+    category: json
+    prompt: |
+      Extract the person's details from this text as a JSON object with the keys name (string), age (integer) and city (string). Reply with only the JSON.
+
+      Marta Kovacs, who turned 34 in May, moved to Ljubljana last year.
+    expect: {name: "Marta Kovacs", age: 34, city: "Ljubljana"}
+    reference: '{"name": "Marta Kovacs", "age": 34, "city": "Ljubljana"}'
+    wrong: '{"name": "Marta Kovacs", "age": "34", "city": "Ljubljana"}'
+
+  - id: order-lines
+    category: json
+    prompt: |
+      Convert this order to JSON with the keys order_id (string) and items (an array of objects with the keys sku, a string, and qty, an integer). Keep the items in the order given. Reply with only the JSON.
+
+      Order A-1093: 3 x KB-220, 1 x MS-04, 12 x CB-1M
+    expect:
+      order_id: "A-1093"
+      items:
+        - {sku: "KB-220", qty: 3}
+        - {sku: "MS-04", qty: 1}
+        - {sku: "CB-1M", qty: 12}
+    reference: '{"order_id": "A-1093", "items": [{"sku": "KB-220", "qty": 3}, {"sku": "MS-04", "qty": 1}, {"sku": "CB-1M", "qty": 12}]}'
+    wrong: '{"order_id": "A-1093", "items": [{"sku": "KB-220", "qty": 3}, {"sku": "MS-04", "qty": 12}, {"sku": "CB-1M", "qty": 1}]}'
+
+  - id: nulls-and-booleans
+    category: json
+    prompt: |
+      Describe this server as a JSON object with exactly these keys: host (string), port (integer), tls (boolean) and owner (string, or null if it isn't stated). Reply with only the JSON.
+
+      The staging box db-7.internal listens on 5433 without encryption.
+    expect: {host: "db-7.internal", port: 5433, tls: false, owner: null}
+    reference: '{"host": "db-7.internal", "port": 5433, "tls": false, "owner": null}'
+    wrong: '{"host": "db-7.internal", "port": 5433, "tls": false, "owner": "staging"}'
+
+  - id: count-log-levels
+    category: json
+    prompt: |
+      Count the lines per log level. Reply with only a JSON object that maps each level to its count, for example {"DEBUG": 1}.
+
+      INFO start
+      WARN disk 81%
+      INFO job 7
+      ERROR timeout
+      INFO job 8
+      WARN disk 90%
+      INFO done
+    expect: {INFO: 4, WARN: 2, ERROR: 1}
+    reference: '{"INFO": 4, "WARN": 2, "ERROR": 1}'
+    wrong: '{"INFO": 3, "WARN": 2, "ERROR": 1}'
+
+  - id: deployment-spec
+    category: json
+    prompt: |
+      Write a JSON object describing this deployment, with the keys service (string), replicas (integer), env (an array of objects with the keys name and value, sorted by name, every value a string) and strategy (either "rolling" or "recreate"). Reply with only the JSON.
+
+      Deploy the checkout service with 4 replicas. Replace all the old pods at once rather than gradually. Set TIMEOUT to 30 and REGION to eu-west.
+    expect:
+      service: "checkout"
+      replicas: 4
+      env:
+        - {name: "REGION", value: "eu-west"}
+        - {name: "TIMEOUT", value: "30"}
+      strategy: "recreate"
+    reference: '{"service": "checkout", "replicas": 4, "env": [{"name": "REGION", "value": "eu-west"}, {"name": "TIMEOUT", "value": "30"}], "strategy": "recreate"}'
+    wrong: '{"service": "checkout", "replicas": 4, "env": [{"name": "TIMEOUT", "value": "30"}, {"name": "REGION", "value": "eu-west"}], "strategy": "rolling"}'
+
+  - id: invent-books
+    category: json
+    prompt: |
+      Invent three fictional books. Reply with only a JSON array of exactly 3 objects, each with the keys title (string), year (integer from 1900 to 2020) and tags (an array of exactly 2 strings). The titles must all be different.
+    schema:
+      type: array
+      minItems: 3
+      maxItems: 3
+      uniqueBy: title
+      items:
+        type: object
+        required: [title, year, tags]
+        additionalProperties: false
+        properties:
+          title: {type: string, minLength: 1}
+          year: {type: integer, minimum: 1900, maximum: 2020}
+          tags: {type: array, minItems: 2, maxItems: 2, items: {type: string}}
+    reference: '[{"title": "A", "year": 1950, "tags": ["x", "y"]}, {"title": "B", "year": 2001, "tags": ["x", "z"]}, {"title": "C", "year": 1999, "tags": ["p", "q"]}]'
+    wrong: '[{"title": "A", "year": 1850, "tags": ["x", "y"]}, {"title": "A", "year": 2001, "tags": ["x"]}, {"title": "C", "year": 1999, "tags": ["p", "q"]}]'
+
+  # ------------------------------------------------------------ coding
+  - id: is-palindrome
+    category: code
+    function: is_palindrome
+    prompt: |
+      Write a Python function is_palindrome(s) that returns True if the string s reads the same forwards and backwards when case and every non-alphanumeric character are ignored, and False otherwise. Reply with only the code.
+    tests:
+      - {call: 'is_palindrome("A man, a plan, a canal: Panama")', expect: true}
+      - {call: 'is_palindrome("race a car")', expect: false}
+      - {call: 'is_palindrome("")', expect: true}
+      - {call: 'is_palindrome("No x in Nixon")', expect: true}
+      - {call: 'is_palindrome("ab")', expect: false}
+    reference: |
+      def is_palindrome(s):
+          t = [c.lower() for c in s if c.isalnum()]
+          return t == t[::-1]
+    wrong: |
+      def is_palindrome(s):
+          return s == s[::-1]
+
+  - id: dedupe-in-order
+    category: code
+    function: dedupe
+    prompt: |
+      Write a Python function dedupe(items) that returns a new list with duplicates removed, keeping the first occurrence of each item and the original order. Reply with only the code.
+    tests:
+      - {call: 'dedupe([3, 1, 3, 2, 1])', expect: [3, 1, 2]}
+      - {call: 'dedupe([])', expect: []}
+      - {call: 'dedupe(["a", "A", "a"])', expect: ["a", "A"]}
+      - {call: 'dedupe([5, 5, 5])', expect: [5]}
+    reference: |
+      def dedupe(items):
+          seen = set()
+          out = []
+          for x in items:
+              if x not in seen:
+                  seen.add(x)
+                  out.append(x)
+          return out
+    wrong: |
+      def dedupe(items):
+          return sorted(set(items))
+
+  - id: to-roman
+    category: code
+    function: to_roman
+    prompt: |
+      Write a Python function to_roman(n) that converts an integer from 1 to 3999 to a Roman numeral, as an uppercase string. Reply with only the code.
+    tests:
+      - {call: 'to_roman(1)', expect: "I"}
+      - {call: 'to_roman(4)', expect: "IV"}
+      - {call: 'to_roman(9)', expect: "IX"}
+      - {call: 'to_roman(40)', expect: "XL"}
+      - {call: 'to_roman(90)', expect: "XC"}
+      - {call: 'to_roman(400)', expect: "CD"}
+      - {call: 'to_roman(944)', expect: "CMXLIV"}
+      - {call: 'to_roman(1994)', expect: "MCMXCIV"}
+      - {call: 'to_roman(3999)', expect: "MMMCMXCIX"}
+    reference: |
+      def to_roman(n):
+          out = ""
+          for v, s in ((1000, "M"), (900, "CM"), (500, "D"), (400, "CD"), (100, "C"), (90, "XC"),
+                       (50, "L"), (40, "XL"), (10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I")):
+              while n >= v:
+                  out += s
+                  n -= v
+          return out
+    wrong: |
+      def to_roman(n):
+          out = ""
+          for v, s in ((1000, "M"), (500, "D"), (100, "C"), (50, "L"), (10, "X"), (5, "V"), (1, "I")):
+              while n >= v:
+                  out += s
+                  n -= v
+          return out
+
+  - id: merge-intervals
+    category: code
+    function: merge
+    prompt: |
+      Write a Python function merge(intervals) that takes a list of [start, end] pairs in any order and returns a new list of merged pairs, sorted by start. Pairs that overlap or touch (such as [1, 4] and [4, 5]) are merged. Reply with only the code.
+    tests:
+      - {call: 'merge([[1, 3], [2, 6], [8, 10]])', expect: [[1, 6], [8, 10]]}
+      - {call: 'merge([[5, 7], [1, 2]])', expect: [[1, 2], [5, 7]]}
+      - {call: 'merge([[1, 4], [4, 5]])', expect: [[1, 5]]}
+      - {call: 'merge([])', expect: []}
+      - {call: 'merge([[1, 10], [2, 3], [4, 5]])', expect: [[1, 10]]}
+    reference: |
+      def merge(intervals):
+          out = []
+          for a, b in sorted(intervals):
+              if out and a <= out[-1][1]:
+                  out[-1][1] = max(out[-1][1], b)
+              else:
+                  out.append([a, b])
+          return out
+    wrong: |
+      def merge(intervals):
+          out = []
+          for a, b in sorted(intervals):
+              if out and a <= out[-1][1]:
+                  out[-1][1] = b
+              else:
+                  out.append([a, b])
+          return out
+
+  - id: run-length
+    category: code
+    function: compress
+    prompt: |
+      Write a Python function compress(s) that run-length encodes a string: each run of a repeated character becomes the character followed by the run's length, and the length is left out when it is 1. For example, "aaabcc" becomes "a3bc2". Reply with only the code.
+    tests:
+      - {call: 'compress("aaabcc")', expect: "a3bc2"}
+      - {call: 'compress("")', expect: ""}
+      - {call: 'compress("abc")', expect: "abc"}
+      - {call: 'compress("zzzzzzzzzzzz")', expect: "z12"}
+      - {call: 'compress("aabbaa")', expect: "a2b2a2"}
+    reference: |
+      def compress(s):
+          out = ""
+          i = 0
+          while i < len(s):
+              j = i
+              while j < len(s) and s[j] == s[i]:
+                  j += 1
+              out += s[i] + (str(j - i) if j - i > 1 else "")
+              i = j
+          return out
+    wrong: |
+      def compress(s):
+          out = ""
+          for c in dict.fromkeys(s):
+              n = s.count(c)
+              out += c + (str(n) if n > 1 else "")
+          return out
+
+  - id: split-budget
+    category: code
+    function: split_budget
+    prompt: |
+      Write a Python function split_budget(total, weights) that divides the integer total into len(weights) integers in proportion to the positive integer weights, using the largest remainder method: give each share the floor of its exact amount, then hand out the leftover units one at a time to the shares with the largest fractional remainders. Ties go to the earlier index. The result must add up to total. Reply with only the code.
+    tests:
+      - {call: 'split_budget(10, [1, 1, 1])', expect: [4, 3, 3]}
+      - {call: 'split_budget(7, [2, 1])', expect: [5, 2]}
+      - {call: 'split_budget(100, [50, 30, 20])', expect: [50, 30, 20]}
+      - {call: 'split_budget(5, [1, 2, 3, 4])', expect: [1, 1, 1, 2]}
+      - {call: 'split_budget(0, [3, 4])', expect: [0, 0]}
+      - {call: 'split_budget(1, [1, 1, 1, 1])', expect: [1, 0, 0, 0]}
+    reference: |
+      def split_budget(total, weights):
+          w = sum(weights)
+          shares = [total * x // w for x in weights]
+          rest = [total * x % w for x in weights]
+          order = sorted(range(len(weights)), key=lambda i: (-rest[i], i))
+          for i in order[:total - sum(shares)]:
+              shares[i] += 1
+          return shares
+    wrong: |
+      def split_budget(total, weights):
+          w = sum(weights)
+          return [round(total * x / w) for x in weights]
+
+  # ------------------------------------------------------------ reasoning with a known answer
+  - id: change-owed
+    category: reasoning
+    prompt: |
+      A notebook costs $3 and a pen costs $1.50. Priya buys 4 notebooks and 6 pens and pays with a $30 bill. How much change does she get, in dollars? Work it out, then finish with a final line of the form ANSWER: <number>.
+    answer: 9
+    reference: "4 x 3 = 12 and 6 x 1.5 = 9, so 21 in all.\nANSWER: 9"
+    wrong: "ANSWER: 21"
+
+  - id: percent-up-down
+    category: reasoning
+    prompt: |
+      A jacket costs $80. Its price is raised by 25%, and then the new price is reduced by 20%. What is the final price, in dollars? Work it out, then finish with a final line of the form ANSWER: <number>.
+    answer: 80
+    reference: "80 x 1.25 = 100, and 100 x 0.8 = 80.\nANSWER: 80"
+    wrong: "ANSWER: 84"
+
+  - id: arrival-time
+    category: reasoning
+    prompt: |
+      A train leaves at 22:40 and the trip takes 5 hours and 35 minutes. At what time does it arrive, on a 24-hour clock? Work it out, then finish with a final line of the form ANSWER: HH:MM.
+    answer: "04:15"
+    reference: "22:40 plus 5:35 is 28:15, which is 04:15 the next day.\nANSWER: 04:15"
+    wrong: "ANSWER: 03:15"
+
+  - id: finish-order
+    category: reasoning
+    prompt: |
+      Five runners, A, B, C, D and E, finish a race with no ties. A finishes before C. C finishes before D. B finishes immediately after D. E finishes last. Which runner finishes second? Work it out, then finish with a final line of the form ANSWER: <letter>.
+    answer: "C"
+    reference: "The order is A, C, D, B, E.\nANSWER: C"
+    wrong: "ANSWER: D"
+
+  - id: divisible-count
+    category: reasoning
+    prompt: |
+      How many integers from 1 to 100 are divisible by 3 or by 5, but not by 15? Work it out, then finish with a final line of the form ANSWER: <number>.
+    answer: 41
+    reference: "33 + 20 - 2 x 6 = 41.\nANSWER: 41"
+    wrong: "ANSWER: 47"
+
+  - id: age-puzzle
+    category: reasoning
+    prompt: |
+      Ana is 24. She is twice as old as Ben was when Ana was as old as Ben is now. How old is Ben now? Work it out, then finish with a final line of the form ANSWER: <number>.
+    answer: 18
+    reference: "Let Ben be b. Ana was b, 24 - b years ago, when Ben was 2b - 24. So 24 = 2(2b - 24), and b = 18.\nANSWER: 18"
+    wrong: "ANSWER: 16"

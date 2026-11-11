@@ -1,0 +1,30 @@
+# Purpose: what does reserving a larger context cost, when the input stays the same?
+# Report: docs/reports/context-length.md
+#
+# Run it:   uv run python -m llmlab run experiments/context-size.yaml
+
+name: context-size
+description: >-
+  SmolLM3 3B Q4_K_M, all layers on the GPU, the 521-token prompt, with 2,048 to 32,768
+  tokens of context reserved.
+
+model:
+  path: ${LLMLAB_HOME}/models/SmolLM3-3B/SmolLM3-Q4_K_M.gguf
+
+server:
+  ctx: 4096
+  gpu_layers: all
+  flash_attn: "on"
+
+workload:
+  prompt_file: ../prompts/field-notes.txt
+  n_predict: 512
+  seed: 42
+
+run:
+  warmup: 1
+  repeats: 5
+  cooldown_s: 0.1
+
+sweep:
+  server.ctx: [2048, 4096, 8192, 16384, 32768]

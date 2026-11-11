@@ -1,0 +1,34 @@
+# Purpose: how do longer inputs change prompt speed, generation speed and first-token time?
+# The same passage sent 1 to 60 times, with one context size large enough for all of them.
+# Report: docs/reports/context-length.md
+#
+# Run it:   uv run python -m llmlab run experiments/context-input-length.yaml
+
+name: context-input-length
+description: >-
+  SmolLM3 3B Q4_K_M, all layers on the GPU, 32,768 tokens of context: inputs from about
+  520 to about 31,000 tokens, 512 tokens generated.
+
+model:
+  path: ${LLMLAB_HOME}/models/SmolLM3-3B/SmolLM3-Q4_K_M.gguf
+
+server:
+  ctx: 32768
+  gpu_layers: all
+  flash_attn: "on"
+
+workload:
+  prompt_file: ../prompts/field-notes.txt
+  n_predict: 512
+  seed: 42
+
+run:
+  warmup: 1
+  repeats: 5
+  cooldown_s: 0.1
+
+idle:
+  vram_margin_mib: 2500   # the 32,768-token context takes far more than the usual margin
+
+sweep:
+  workload.prompt_repeat: [1, 2, 4, 8, 16, 32, 60]

@@ -1,0 +1,36 @@
+# Purpose: the cloud baseline. The same prompt as smollm3-baseline.yaml, sent to
+# Claude Haiku, Sonnet and Opus through Claude Code on your Claude plan (no API key).
+# It answers: how does a 3B model on a desktop GPU compare with Claude on speed and
+# time to first token?
+#
+# Claude Code must be installed and signed in. Each run uses your plan's usage limits;
+# this file makes 18 requests of about 1,400 input and 1,100 output tokens.
+#
+# Run it:   uv run python -m llmlab run experiments/claude-baseline.yaml
+# Check it: uv run python -m llmlab run experiments/claude-baseline.yaml --dry-run
+
+name: claude-baseline
+description: >-
+  Claude Haiku 5.5, Sonnet 5.5 and Opus 5.5 on the 521-token field-notes prompt,
+  through Claude Code, at low effort. Thinking is the model's choice and is recorded.
+
+engine:
+  type: claude-code
+  effort: low      # the lowest level every model accepts
+  # Haiku 5.5 thinks even when Claude Code is told not to (session 5 caught it), so the
+  # baseline lets each model decide and records the thinking tokens and time.
+  thinking: auto
+
+model:
+  name: claude-haiku-5-5
+
+workload:
+  prompt_file: ../prompts/field-notes.txt   # relative to this file
+
+run:
+  warmup: 1
+  repeats: 5
+  cooldown_s: 1.0   # a pause between requests; the cloud has no GPU clocks to keep warm
+
+sweep:
+  model.name: [claude-haiku-5-5, claude-sonnet-5-5, claude-opus-5-5]

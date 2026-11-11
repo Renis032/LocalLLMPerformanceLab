@@ -1,0 +1,321 @@
+{"t": 0.5788, "ev": {"type": "system", "subtype": "init", "model": "claude-sonnet-5-5", "apiKeySource": "none", "claude_code_version": "2.1.311", "tools": [], "mcp_servers": []}}
+{"t": 1.415, "ev": {"type": "stream_event", "event": {"type": "message_start", "message": {"model": "claude-sonnet-5-5", "id": "msg_011Cgp7j5BArn5oUsMDgSSm3", "type": "message", "role": "assistant", "content": [], "container": null, "stop_reason": null, "stop_sequence": null, "stop_details": null, "usage": {"input_tokens": 1354, "cache_creation_input_tokens": 0, "cache_read_input_tokens": 0, "cache_creation": {"ephemeral_5m_input_tokens": 0, "ephemeral_1h_input_tokens": 0}, "output_tokens": 8, "service_tier": "standard", "inference_geo": "global", "speed": "standard"}, "input_transformations": [], "diagnostics": null, "context_management": null}}}}
+{"t": 1.4151, "ev": {"type": "stream_event", "event": {"type": "content_block_start", "index": 0, "content_block": {"type": "text", "text": ""}}}}
+{"t": 1.4153, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "**Practical checklist**"}}}}
+{"t": 1.7684, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "\n\n1. **Est"}}}}
+{"t": 1.7685, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "imate mem"}}}}
+{"t": 1.7686, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ory before down"}}}}
+{"t": 1.7686, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "loading.**"}}}}
+{"t": 1.7687, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "\n   - Weights "}}}}
+{"t": 1.7688, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "≈ par"}}}}
+{"t": 1.7689, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ameters × b"}}}}
+{"t": 1.7689, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "its per weight "}}}}
+{"t": 1.769, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "÷ 8. A"}}}}
+{"t": 1.7691, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " 8"}}}}
+{"t": 1.7691, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "B model at 4-"}}}}
+{"t": 1.7908, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "bit is ro"}}}}
+{"t": 2.1107, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ughly 4.5–"}}}}
+{"t": 2.1108, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "5 GB;"}}}}
+{"t": 2.1109, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " at 8"}}}}
+{"t": 2.111, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "-bit about"}}}}
+{"t": 2.1111, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " 8"}}}}
+{"t": 2.1111, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": ".5 "}}}}
+{"t": 2.1112, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "GB.\n   - Add"}}}}
+{"t": 2.1113, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " the"}}}}
+{"t": 2.1114, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " KV cache ("}}}}
+{"t": 2.121, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "gr"}}}}
+{"t": 2.1497, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ows lin"}}}}
+{"t": 2.1835, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "early with context length"}}}}
+{"t": 2.5085, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " and"}}}}
+{"t": 2.5086, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " lay"}}}}
+{"t": 2.5087, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "er count) plus 0"}}}}
+{"t": 2.5088, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": ".5–1.5 G"}}}}
+{"t": 2.5089, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "B for run"}}}}
+{"t": 2.5089, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "time bu"}}}}
+{"t": 2.509, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ffers and the"}}}}
+{"t": 2.5091, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " des"}}}}
+{"t": 2.5092, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ktop's"}}}}
+{"t": 2.512, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " own V"}}}}
+{"t": 2.5451, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "RAM use"}}}}
+{"t": 2.5793, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": ".\n   -"}}}}
+{"t": 2.8588, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Leave headroom:"}}}}
+{"t": 2.8589, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " a"}}}}
+{"t": 2.859, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "im for ~10%"}}}}
+{"t": 2.8591, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " free"}}}}
+{"t": 2.8592, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " VRAM after"}}}}
+{"t": 2.8593, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " ever"}}}}
+{"t": 2.8594, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ything is"}}}}
+{"t": 2.8594, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " loaded.\n\n2. **"}}}}
+{"t": 2.8796, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "Pick the quantization to"}}}}
+{"t": 2.9133, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " fit,"}}}}
+{"t": 2.9455, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " not the"}}}}
+{"t": 2.9774, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " other"}}}}
+{"t": 3.2082, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " way around.**\n   -"}}}}
+{"t": 3.2083, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Start"}}}}
+{"t": 3.2084, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " with"}}}}
+{"t": 3.2084, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Q8"}}}}
+{"t": 3.2085, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " "}}}}
+{"t": 3.2086, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "if it"}}}}
+{"t": 3.2086, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " fits com"}}}}
+{"t": 3.2464, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "fortably; Q6/"}}}}
+{"t": 3.2765, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "Q5 are us"}}}}
+{"t": 3.3099, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ually near-l"}}}}
+{"t": 3.3543, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ossless in"}}}}
+{"t": 3.3777, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " practice.\n   - Q"}}}}
+{"t": 3.9089, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "4 "}}}}
+{"t": 3.909, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "(e"}}}}
+{"t": 3.9091, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": ".g., Q4_K"}}}}
+{"t": 3.9091, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "_M) is the common"}}}}
+{"t": 3.9092, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " sweet spot when"}}}}
+{"t": 3.9093, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " VRAM is tight."}}}}
+{"t": 3.9093, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "\n   - Below "}}}}
+{"t": 3.9095, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "4-"}}}}
+{"t": 3.9095, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "bit, qu"}}}}
+{"t": 3.9096, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ality drops no"}}}}
+{"t": 3.9097, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ticeably,"}}}}
+{"t": 3.9097, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " especially for"}}}}
+{"t": 4.3583, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " small models. A larger model at"}}}}
+{"t": 4.3585, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Q4 us"}}}}
+{"t": 4.3586, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ually beats a smaller one"}}}}
+{"t": 4.3587, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " at"}}}}
+{"t": 4.3588, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Q8.\n\n3. **"}}}}
+{"t": 4.3588, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "F"}}}}
+{"t": 4.3589, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "it"}}}}
+{"t": 4.359, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " the whole model on the GP"}}}}
+{"t": 4.3592, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "U if"}}}}
+{"t": 4.3593, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " you"}}}}
+{"t": 4.3594, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " can.**\n   -"}}}}
+{"t": 4.3594, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Off"}}}}
+{"t": 4.716, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "load all layers first"}}}}
+{"t": 4.7161, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "."}}}}
+{"t": 4.7162, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Re"}}}}
+{"t": 4.7163, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "duce only"}}}}
+{"t": 4.7164, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " if lo"}}}}
+{"t": 4.7165, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ading fails.\n   - If"}}}}
+{"t": 4.7166, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " partial offload"}}}}
+{"t": 4.7167, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " is un"}}}}
+{"t": 4.7167, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "avoidable, off"}}}}
+{"t": 4.7168, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "load as many layers as f"}}}}
+{"t": 4.7169, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "it;"}}}}
+{"t": 4.717, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " each"}}}}
+{"t": 5.1126, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " lay"}}}}
+{"t": 5.1126, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "er left"}}}}
+{"t": 5.1127, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " on CPU sl"}}}}
+{"t": 5.1128, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ows every token,"}}}}
+{"t": 5.1129, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " so spe"}}}}
+{"t": 5.1129, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ed fal"}}}}
+{"t": 5.113, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ls off"}}}}
+{"t": 5.1131, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " sharply.\n   -"}}}}
+{"t": 5.1132, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Consider a sm"}}}}
+{"t": 5.1132, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "aller model or l"}}}}
+{"t": 5.1133, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ower quant inst"}}}}
+{"t": 5.1134, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ead of a"}}}}
+{"t": 5.459, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " heavy CPU split."}}}}
+{"t": 5.4591, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "\n\n4. **Budget the"}}}}
+{"t": 5.4593, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " context window"}}}}
+{"t": 5.4594, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " de"}}}}
+{"t": 5.4595, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "liberately.**\n   -"}}}}
+{"t": 5.4596, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Set context to what"}}}}
+{"t": 5.4596, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " you actually need, not the"}}}}
+{"t": 5.4597, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " model's maximum.\n   "}}}}
+{"t": 5.4598, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "- If"}}}}
+{"t": 5.4599, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " VRAM is short"}}}}
+{"t": 5.4599, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": ", quantize the KV c"}}}}
+{"t": 5.46, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ache (e.g., "}}}}
+{"t": 5.8085, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "8-bit)"}}}}
+{"t": 5.8086, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " and en"}}}}
+{"t": 5.8087, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "able flash attention where"}}}}
+{"t": 5.8088, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " sup"}}}}
+{"t": 5.8088, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ported.\n   - Long"}}}}
+{"t": 5.8089, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " contexts also"}}}}
+{"t": 5.809, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " slow gener"}}}}
+{"t": 5.8091, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ation,"}}}}
+{"t": 5.8092, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " since each token att"}}}}
+{"t": 5.8092, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ends over"}}}}
+{"t": 5.8093, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " more cache"}}}}
+{"t": 5.8129, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": ".\n\n5. **T"}}}}
+{"t": 6.1592, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "une batch sett"}}}}
+{"t": 6.1594, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ings for prompt processing."}}}}
+{"t": 6.1595, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "**\n   - Larger bat"}}}}
+{"t": 6.1595, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ch/"}}}}
+{"t": 6.1596, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ubatch sizes spe"}}}}
+{"t": 6.1597, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ed up"}}}}
+{"t": 6.1598, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " pr"}}}}
+{"t": 6.1599, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ompt ingestion but use"}}}}
+{"t": 6.1599, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " more mem"}}}}
+{"t": 6.16, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ory; ra"}}}}
+{"t": 6.1817, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ise them"}}}}
+{"t": 6.2128, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " until g"}}}}
+{"t": 6.5141, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ains fl"}}}}
+{"t": 6.5142, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "atten or"}}}}
+{"t": 6.5143, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " mem"}}}}
+{"t": 6.5143, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ory runs out.\n   -"}}}}
+{"t": 6.5144, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Long"}}}}
+{"t": 6.5145, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " prompts (docum"}}}}
+{"t": 6.5145, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ents, code"}}}}
+{"t": 6.5146, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": ") are lim"}}}}
+{"t": 6.5147, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ited by this st"}}}}
+{"t": 6.5458, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "age,"}}}}
+{"t": 6.5788, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " so it"}}}}
+{"t": 6.6125, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " matters most"}}}}
+{"t": 6.9108, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " for ret"}}}}
+{"t": 6.9109, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "rieval and"}}}}
+{"t": 6.9111, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " summarization workloads."}}}}
+{"t": 6.9112, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "\n\n6. **Measure,"}}}}
+{"t": 6.9113, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " don"}}}}
+{"t": 6.9114, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "'t guess.**\n   -"}}}}
+{"t": 6.9114, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Record prompt t"}}}}
+{"t": 6.9115, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "okens/"}}}}
+{"t": 6.9121, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "s and"}}}}
+{"t": 6.9465, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " generation tokens/s separ"}}}}
+{"t": 6.9793, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ately;"}}}}
+{"t": 7.0123, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " they resp"}}}}
+{"t": 7.2592, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ond to different changes.\n   "}}}}
+{"t": 7.2593, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "- Comp"}}}}
+{"t": 7.2594, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "are against"}}}}
+{"t": 7.2594, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " a r"}}}}
+{"t": 7.2596, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ough "}}}}
+{"t": 7.2597, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ceiling: generation speed"}}}}
+{"t": 7.2597, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " ≤"}}}}
+{"t": 7.2797, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " memory bandwidth"}}}}
+{"t": 7.3144, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " ÷ model size in"}}}}
+{"t": 7.3462, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " bytes. If"}}}}
+{"t": 7.3791, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " you're"}}}}
+{"t": 7.4128, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " far below that, something"}}}}
+{"t": 7.6092, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " ("}}}}
+{"t": 7.6093, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "CPU split, power"}}}}
+{"t": 7.6093, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " lim"}}}}
+{"t": 7.6094, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "its"}}}}
+{"t": 7.6095, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": ", thermals) is in"}}}}
+{"t": 7.6128, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " the way.\n   - Change"}}}}
+{"t": 7.6536, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " one vari"}}}}
+{"t": 7.6799, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "able at a time and"}}}}
+{"t": 7.7121, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " r"}}}}
+{"t": 7.7457, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "erun the"}}}}
+{"t": 7.7793, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " same prompt.\n\n7."}}}}
+{"t": 7.8129, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " **Check the system around"}}}}
+{"t": 8.0084, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " the GPU.**\n   "}}}}
+{"t": 8.0085, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "- Close other V"}}}}
+{"t": 8.0086, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "RAM cons"}}}}
+{"t": 8.0087, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "umers (brows"}}}}
+{"t": 8.0088, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ers with"}}}}
+{"t": 8.0139, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " hardware acceleration,"}}}}
+{"t": 8.0469, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " games, other"}}}}
+{"t": 8.0813, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " model"}}}}
+{"t": 8.1132, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " servers).\n   - Make"}}}}
+{"t": 8.1468, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " sure the card"}}}}
+{"t": 8.1799, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " run"}}}}
+{"t": 8.2128, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "s at full"}}}}
+{"t": 8.3624, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " PCIe link"}}}}
+{"t": 8.3625, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " width and its"}}}}
+{"t": 8.3625, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " power/"}}}}
+{"t": 8.3626, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "thermal lim"}}}}
+{"t": 8.3801, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "its aren't throttling it"}}}}
+{"t": 8.4178, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "."}}}}
+{"t": 8.4467, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Check cl"}}}}
+{"t": 8.4802, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ocks during a"}}}}
+{"t": 8.5167, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " run"}}}}
+{"t": 8.5459, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": ".\n   -"}}}}
+{"t": 8.5795, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Keep dr"}}}}
+{"t": 8.6122, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ivers and"}}}}
+{"t": 8.7087, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " the in"}}}}
+{"t": 8.7088, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ference runtime up to date;"}}}}
+{"t": 8.7126, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " kernel impro"}}}}
+{"t": 8.7457, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "vements often"}}}}
+{"t": 8.7786, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " mat"}}}}
+{"t": 8.8124, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ter as"}}}}
+{"t": 8.8458, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " much as h"}}}}
+{"t": 8.8792, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ardware.\n\n8. **"}}}}
+{"t": 8.913, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "Use spe"}}}}
+{"t": 8.9451, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ed"}}}}
+{"t": 8.9786, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " tricks when they f"}}}}
+{"t": 9.012, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "it your"}}}}
+{"t": 9.1093, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " workload.**\n   -"}}}}
+{"t": 9.1093, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Speculative decoding with"}}}}
+{"t": 9.113, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " a small draft model can raise"}}}}
+{"t": 9.1463, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " generation speed when"}}}}
+{"t": 9.1791, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " mem"}}}}
+{"t": 9.2135, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ory b"}}}}
+{"t": 9.246, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "andwidth is the bott"}}}}
+{"t": 9.2799, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "leneck.\n   -"}}}}
+{"t": 9.3125, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Pr"}}}}
+{"t": 9.346, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ompt caching hel"}}}}
+{"t": 9.3792, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ps when"}}}}
+{"t": 9.4121, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " many"}}}}
+{"t": 9.458, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " requests share a long"}}}}
+{"t": 9.4795, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " prefix.\n   -"}}}}
+{"t": 9.5129, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Bat"}}}}
+{"t": 9.5458, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ching mult"}}}}
+{"t": 9.579, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "iple requests impro"}}}}
+{"t": 9.6133, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ves total"}}}}
+{"t": 9.646, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " throughput, though"}}}}
+{"t": 9.6787, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " not single"}}}}
+{"t": 9.7122, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "-st"}}}}
+{"t": 9.7455, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ream lat"}}}}
+{"t": 9.7792, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ency.\n\n9. **Valid"}}}}
+{"t": 9.8147, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ate qu"}}}}
+{"t": 9.8453, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ality after"}}}}
+{"t": 9.8783, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " each change"}}}}
+{"t": 9.9123, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": ".**\n   - Run a"}}}}
+{"t": 9.945, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " small f"}}}}
+{"t": 9.9785, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ixed set"}}}}
+{"t": 10.0131, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " of your"}}}}
+{"t": 10.0454, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " own prompts after"}}}}
+{"t": 10.0787, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " chang"}}}}
+{"t": 10.1114, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ing quantization,"}}}}
+{"t": 10.1452, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " KV cache prec"}}}}
+{"t": 10.1781, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ision, or model"}}}}
+{"t": 10.2115, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "."}}}}
+{"t": 10.2593, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "\n   - Wat"}}}}
+{"t": 10.2786, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ch for sub"}}}}
+{"t": 10.3118, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "tle fail"}}}}
+{"t": 10.3447, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ures: repetition, bro"}}}}
+{"t": 10.3783, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ken form"}}}}
+{"t": 10.4117, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "atting, or weaker long"}}}}
+{"t": 10.4459, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "-context rec"}}}}
+{"t": 10.4779, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "all."}}}}
+{"t": 10.5117, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "\n\n10. **Keep a"}}}}
+{"t": 10.546, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " record"}}}}
+{"t": 10.5782, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "."}}}}
+{"t": 10.6112, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "**\n    - Note"}}}}
+{"t": 10.6522, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " model, quant"}}}}
+{"t": 10.6785, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": ", context size, batch sett"}}}}
+{"t": 10.7116, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ings, run"}}}}
+{"t": 10.7447, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "time version"}}}}
+{"t": 10.7786, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": ", and both"}}}}
+{"t": 10.8123, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " speeds."}}}}
+{"t": 10.8447, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Future"}}}}
+{"t": 10.878, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " up"}}}}
+{"t": 10.912, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "grades become"}}}}
+{"t": 10.9449, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " sim"}}}}
+{"t": 10.9777, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ple comparisons r"}}}}
+{"t": 11.0112, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ather than gu"}}}}
+{"t": 11.0443, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "essw"}}}}
+{"t": 11.0794, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ork.\n\n**"}}}}
+{"t": 11.1113, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "Rule of thumb:"}}}}
+{"t": 11.1447, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "** f"}}}}
+{"t": 11.1776, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "it ever"}}}}
+{"t": 11.2107, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ything in"}}}}
+{"t": 11.2443, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " VRAM, pick the"}}}}
+{"t": 11.2779, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " largest model wh"}}}}
+{"t": 11.3109, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ose"}}}}
+{"t": 11.3442, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " Q4–"}}}}
+{"t": 11.378, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "Q6"}}}}
+{"t": 11.411, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " quant le"}}}}
+{"t": 11.444, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "aves room"}}}}
+{"t": 11.4772, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " for the"}}}}
+{"t": 11.5114, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " context"}}}}
+{"t": 11.5439, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " you really use"}}}}
+{"t": 11.5773, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": ", then"}}}}
+{"t": 11.6105, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " t"}}}}
+{"t": 11.6436, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "une bat"}}}}
+{"t": 11.6768, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ch"}}}}
+{"t": 11.7095, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " size"}}}}
+{"t": 11.7428, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": " and c"}}}}
+{"t": 11.7769, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ache prec"}}}}
+{"t": 11.8099, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "ision from there"}}}}
+{"t": 11.8253, "ev": {"type": "stream_event", "event": {"type": "content_block_delta", "index": 0, "delta": {"type": "text_delta", "text": "."}}}}
+{"t": 11.8367, "ev": {"type": "stream_event", "event": {"type": "content_block_stop", "index": 0}}}
+{"t": 11.8494, "ev": {"type": "stream_event", "event": {"type": "message_delta", "delta": {"stop_reason": "end_turn", "stop_sequence": null, "stop_details": null, "container": null}, "usage": {"input_tokens": 1354, "cache_creation_input_tokens": 0, "cache_read_input_tokens": 0, "output_tokens": 1232, "output_tokens_details": {"thinking_tokens": 0}, "iterations": [{"input_tokens": 1354, "output_tokens": 1232, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "cache_creation": {"ephemeral_5m_input_tokens": 0, "ephemeral_1h_input_tokens": 0}, "type": "message"}]}, "context_management": {"applied_edits": []}}}}
+{"t": 11.8496, "ev": {"type": "stream_event", "event": {"type": "message_stop"}}}
+{"t": 11.8565, "ev": {"type": "result", "subtype": "success", "is_error": false, "num_turns": 1, "duration_ms": 11326, "duration_api_ms": 11255, "ttft_stream_ms": 885, "time_to_request_ms": 70, "total_cost_usd": 0.015028000000000001, "usage": {"input_tokens": 1354, "cache_creation_input_tokens": 0, "cache_read_input_tokens": 0, "output_tokens": 1232, "output_tokens_details": {"thinking_tokens": 0}, "server_tool_use": {"web_search_requests": 0, "web_fetch_requests": 0}, "service_tier": "standard", "cache_creation": {"ephemeral_1h_input_tokens": 0, "ephemeral_5m_input_tokens": 0}, "inference_geo": "global", "iterations": [{"input_tokens": 1354, "output_tokens": 1232, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0, "cache_creation": {"ephemeral_5m_input_tokens": 0, "ephemeral_1h_input_tokens": 0}, "type": "message"}], "speed": "standard", "fallback_credit": null}}}

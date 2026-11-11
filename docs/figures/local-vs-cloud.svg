@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 392" width="820" height="392" role="img" aria-labelledby="t d">
+<title id="t">A 3B model on a gaming GPU starts answering 8–18× sooner than Claude</title>
+<desc id="d">Median of 5 runs on the same 521-token prompt. SmolLM3 3B, Q4_K_M: 154 tokens per second, first visible token after 0.10 seconds; Claude Haiku 5.5: 186 tokens per second, first visible token after 1.64 seconds; Claude Sonnet 5.5: 119 tokens per second, first visible token after 0.84 seconds; Claude Opus 5.5: 94 tokens per second, first visible token after 1.78 seconds.</desc>
+<style>
+  .root { --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7;
+          --cloud: #2a78d6; --local: #eb6834; }
+  @media (prefers-color-scheme: dark) {
+    .root { --surface: #1a1a19; --ink: #f0efec; --ink2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835;
+            --cloud: #3987e5; --local: #d95926; }
+  }
+  text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; fill: var(--ink2); font-size: 13px; }
+  .bg { fill: var(--surface); }
+  .title { fill: var(--ink); font-size: 20px; font-weight: 600; }
+  .sub { font-size: 14px; }
+  .ptitle { fill: var(--ink); font-size: 13px; font-weight: 600; }
+  .name { fill: var(--ink); font-size: 13px; font-weight: 600; }
+  .where { fill: var(--muted); font-size: 12px; }
+  .val { fill: var(--ink); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .tick { fill: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .grid { stroke: var(--grid); stroke-width: 1; }
+  .axis { stroke: var(--axis); stroke-width: 1; }
+  .local { fill: var(--local); } .cloud { fill: var(--cloud); }
+  .note { fill: var(--muted); font-size: 12px; }
+</style>
+<g class="root">
+<rect class="bg" width="820" height="392" rx="8"/>
+<text class="title" x="24" y="36">A 3B model on a gaming GPU starts answering 8–18× sooner than Claude</text>
+<text class="sub" x="24" y="60">It also streams faster than Sonnet and Opus.</text>
+<text class="sub" x="24" y="78">Speed only: quality is in the figure at the top of the README. Median of 5 runs on the same 521-token prompt.</text>
+<rect class="local" x="24" y="96" width="14" height="14" rx="3"/><text x="44" y="108">On this PC (llama.cpp, RTX 3060 Ti)</text>
+<rect class="cloud" x="300" y="96" width="14" height="14" rx="3"/><text x="320" y="108">Anthropic cloud, through Claude Code on a Claude plan</text>
+<text class="name" x="24" y="186">SmolLM3 3B, Q4_K_M</text><text class="where" x="24" y="201">this PC, RTX 3060 Ti</text><text class="name" x="24" y="224">Claude Haiku 5.5</text><text class="where" x="24" y="239">Anthropic cloud</text><text class="name" x="24" y="262">Claude Sonnet 5.5</text><text class="where" x="24" y="277">Anthropic cloud</text><text class="name" x="24" y="300">Claude Opus 5.5</text><text class="where" x="24" y="315">Anthropic cloud</text>
+<text class="ptitle" x="214" y="154">Generation speed, tokens/s (higher is faster)</text><line class="axis" x1="214.0" x2="214.0" y1="166" y2="312"/><text class="tick" x="214.0" y="328" text-anchor="middle">0</text><line class="grid" x1="266.3" x2="266.3" y1="166" y2="312"/><text class="tick" x="266.3" y="328" text-anchor="middle">50</text><line class="grid" x1="318.5" x2="318.5" y1="166" y2="312"/><text class="tick" x="318.5" y="328" text-anchor="middle">100</text><line class="grid" x1="370.8" x2="370.8" y1="166" y2="312"/><text class="tick" x="370.8" y="328" text-anchor="middle">150</text><line class="grid" x1="423.1" x2="423.1" y1="166" y2="312"/><text class="tick" x="423.1" y="328" text-anchor="middle">200</text><path class="local" d="M214.0,172.0 H370.8 Q374.8,172.0 374.8,176.0 V188.0 Q374.8,192.0 370.8,192.0 H214.0 Z"><title>SmolLM3 3B, Q4_K_M: 154 tok/s</title></path><text class="val" x="380.8" y="187">154 tok/s</text><path class="cloud" d="M214.0,210.0 H404.7 Q408.7,210.0 408.7,214.0 V226.0 Q408.7,230.0 404.7,230.0 H214.0 Z"><title>Claude Haiku 5.5: 186 tok/s</title></path><text class="val" x="414.7" y="225">186 tok/s</text><path class="cloud" d="M214.0,248.0 H334.2 Q338.2,248.0 338.2,252.0 V264.0 Q338.2,268.0 334.2,268.0 H214.0 Z"><title>Claude Sonnet 5.5: 119 tok/s</title></path><text class="val" x="344.2" y="263">119 tok/s</text><path class="cloud" d="M214.0,286.0 H308.1 Q312.1,286.0 312.1,290.0 V302.0 Q312.1,306.0 308.1,306.0 H214.0 Z"><title>Claude Opus 5.5: 94 tok/s</title></path><text class="val" x="318.1" y="301">94 tok/s</text>
+<text class="ptitle" x="548" y="154">First visible token, seconds (lower is sooner)</text><line class="axis" x1="548.0" x2="548.0" y1="166" y2="312"/><text class="tick" x="548.0" y="328" text-anchor="middle">0</text><line class="grid" x1="605.5" x2="605.5" y1="166" y2="312"/><text class="tick" x="605.5" y="328" text-anchor="middle">0.5</text><line class="grid" x1="663.0" x2="663.0" y1="166" y2="312"/><text class="tick" x="663.0" y="328" text-anchor="middle">1</text><line class="grid" x1="720.5" x2="720.5" y1="166" y2="312"/><text class="tick" x="720.5" y="328" text-anchor="middle">1.5</text><line class="grid" x1="778.0" x2="778.0" y1="166" y2="312"/><text class="tick" x="778.0" y="328" text-anchor="middle">2</text><path class="local" d="M548.0,172.0 H555.4 Q559.4,172.0 559.4,176.0 V188.0 Q559.4,192.0 555.4,192.0 H548.0 Z"><title>SmolLM3 3B, Q4_K_M: 0.10 s</title></path><text class="val" x="565.4" y="187">0.10 s</text><path class="cloud" d="M548.0,210.0 H732.9 Q736.9,210.0 736.9,214.0 V226.0 Q736.9,230.0 732.9,230.0 H548.0 Z"><title>Claude Haiku 5.5: 1.64 s</title></path><text class="val" x="742.9" y="225">1.64 s</text><path class="cloud" d="M548.0,248.0 H640.2 Q644.2,248.0 644.2,252.0 V264.0 Q644.2,268.0 640.2,268.0 H548.0 Z"><title>Claude Sonnet 5.5: 0.84 s</title></path><text class="val" x="650.2" y="263">0.84 s</text><path class="cloud" d="M548.0,286.0 H748.7 Q752.7,286.0 752.7,290.0 V302.0 Q752.7,306.0 748.7,306.0 H548.0 Z"><title>Claude Opus 5.5: 1.78 s</title></path><text class="val" x="758.7" y="301">1.78 s</text>
+<text class="note" x="24" y="354">Haiku 5.5 thinks for about 95 hidden tokens before its first visible token. Claude Code's start-up (about 0.55 s per request) is not counted.</text>
+<text class="note" x="24" y="371">Each model family has its own tokenizer, so tokens/s compare only approximately across families.</text>
+</g>
+</svg>

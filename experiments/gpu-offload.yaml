@@ -1,0 +1,29 @@
+# Purpose: how many layers belong on the GPU? The same model and prompt with 0 to all 37
+# layers offloaded. Report: docs/reports/gpu-offload.md
+#
+# Run it:   uv run python -m llmlab run experiments/gpu-offload.yaml
+
+name: gpu-offload
+description: >-
+  SmolLM3 3B Q4_K_M on the 521-token field-notes prompt, from no layers on the GPU to all 37.
+
+model:
+  path: ${LLMLAB_HOME}/models/SmolLM3-3B/SmolLM3-Q4_K_M.gguf
+
+server:
+  ctx: 4096
+  gpu_layers: all
+  flash_attn: "on"
+
+workload:
+  prompt_file: ../prompts/field-notes.txt
+  n_predict: 512
+  seed: 42
+
+run:
+  warmup: 1
+  repeats: 5
+  cooldown_s: 0.1
+
+sweep:
+  server.gpu_layers: [0, 6, 12, 18, 24, 30, 34, 36, all]

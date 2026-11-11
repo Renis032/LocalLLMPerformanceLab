@@ -1,0 +1,46 @@
+# Purpose: what does each quantization level buy and cost on the GPU? Speed, memory and
+# answer quality for one model at seven precisions, all built from the same 16-bit file
+# (docs/setup.md). Report: docs/reports/quantization.md
+#
+# Run it:   uv run python -m llmlab run experiments/quantization-gpu.yaml
+
+name: quantization-gpu
+description: >-
+  SmolLM3 3B from Q2_K to F16, all layers on the GPU: the baseline speed runs, then 24
+  graded tasks three times each.
+
+model:
+  path: ${LLMLAB_HOME}/models/SmolLM3-3B/SmolLM3-Q4_K_M.gguf
+
+server:
+  ctx: 4096
+  gpu_layers: all
+  flash_attn: "on"
+
+workload:
+  prompt_file: ../prompts/field-notes.txt
+  n_predict: 512
+  seed: 42
+
+run:
+  warmup: 1
+  repeats: 5
+  cooldown_s: 0.1
+
+idle:
+  vram_margin_mib: 300   # F16 needs most of the card; the VRAM check reports how close it comes
+
+quality:
+  suite: ../evals/core.yaml
+  repeats: 3
+
+sweep:
+  model.path:
+    - ${LLMLAB_HOME}/models/SmolLM3-3B-ladder/SmolLM3-Q2_K.gguf
+    - ${LLMLAB_HOME}/models/SmolLM3-3B-ladder/SmolLM3-Q3_K_M.gguf
+    - ${LLMLAB_HOME}/models/SmolLM3-3B/SmolLM3-Q4_K_M.gguf
+    - ${LLMLAB_HOME}/models/SmolLM3-3B-ladder/SmolLM3-Q4_K_M-local.gguf   # a control: built here, should match the official file above
+    - ${LLMLAB_HOME}/models/SmolLM3-3B-ladder/SmolLM3-Q5_K_M.gguf
+    - ${LLMLAB_HOME}/models/SmolLM3-3B-ladder/SmolLM3-Q6_K.gguf
+    - ${LLMLAB_HOME}/models/SmolLM3-3B-ladder/SmolLM3-Q8_0.gguf
+    - ${LLMLAB_HOME}/models/SmolLM3-3B-ladder/SmolLM3-f16.gguf

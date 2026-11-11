@@ -1,0 +1,40 @@
+# Purpose: speed and answer quality for the local model, in one session. The speed runs
+# match smollm3-baseline.yaml, so their results stay comparable. Then the model answers
+# the 24 tasks in evals/core.yaml three times each, and code grades every answer.
+# It also tests a sanity check: where the layers run should change speed, not quality.
+#
+# Run it:   uv run python -m llmlab run experiments/smollm3-quality.yaml
+# Check it: uv run python -m llmlab run experiments/smollm3-quality.yaml --dry-run
+
+name: smollm3-quality
+description: >-
+  SmolLM3 3B Q4_K_M: the baseline speed runs, then 24 graded tasks three times each.
+  All layers on the GPU, and 18 of 37 layers on the GPU.
+
+model:
+  path: ${LLMLAB_HOME}/models/SmolLM3-3B/SmolLM3-Q4_K_M.gguf
+
+server:
+  ctx: 4096
+  gpu_layers: all
+  flash_attn: "on"   # quoted: YAML reads a bare on as true (the harness accepts both)
+
+workload:
+  prompt_file: ../prompts/field-notes.txt   # relative to this file
+  n_predict: 512
+  seed: 42
+
+run:
+  warmup: 1
+  repeats: 5
+  cooldown_s: 0.1   # longer pauses let the GPU drop to a power-saving state between runs
+
+quality:
+  suite: ../evals/core.yaml
+  repeats: 3
+  max_tokens: 1500     # a limit on each answer, thinking included
+  temperature: 0.7     # above zero, so repeats can show whether answers are consistent
+  thinking: "on"       # SmolLM3's own default
+
+sweep:
+  server.gpu_layers: [all, 18]

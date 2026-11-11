@@ -1,0 +1,18 @@
+# Python and tools
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+
+# This machine's own settings: uv.toml keeps uv's cache on D: (see pyproject.toml), and
+# .claude/ holds the Claude Code app's preview settings with local paths
+uv.toml
+.claude/
+
+# Results live outside the repository, in LLMLAB_HOME (docs/setup.md). The demo's copy of
+# them is demo/lab-demo.sqlite.gz, made with `python -m llmlab demo --rebuild`.
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.gguf
+spike/results/

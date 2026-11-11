@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLM Performance Lab</title>
+<meta name="description" content="Benchmarks for language models on a local GPU and Claude in the cloud, with trust checks on every run.">
+<link rel="icon" href="/static/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static/app.css">
+<script>
+  try { const t = localStorage.getItem('llmlab-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<script type="module" src="/static/app.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#/" aria-label="LLM Performance Lab, overview">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="1" y="1" width="22" height="22" rx="6" style="fill: var(--accent)"/>
+      <path d="M6 17V12M10 17V8M14 17V10M18 17V6" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+    <span>LLM Performance Lab</span>
+  </a>
+  <nav class="tabs" aria-label="Sections">
+    <a href="#/" data-tab="overview">Overview</a>
+    <a href="#/run" data-tab="run">Run</a>
+    <a href="#/history" data-tab="history">History</a>
+    <a href="#/quality" data-tab="quality">Quality</a>
+    <a href="#/compare" data-tab="compare">Compare</a>
+  </nav>
+  <div class="topbar-right">
+    <span id="demo-badge" class="pill demo-badge" hidden title="Results recorded while this project was built, on an RTX 3060 Ti with Claude as the cloud baseline. Starting runs is off in the demo.">Demo · recorded results</span>
+    <a id="run-pill" class="pill" href="#/run" hidden><span class="live-dot"></span><span class="pill-text"></span></a>
+    <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch between dark and light">
+      <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 2a6 6 0 0 1 0 12Z" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>
+<main id="view" tabindex="-1"></main>
+<div id="tooltip" class="tooltip" hidden></div>
+</body>
+</html>
